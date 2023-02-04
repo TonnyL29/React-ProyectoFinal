@@ -6,7 +6,7 @@ import Youtube from './Resource/image/Youtube.png';
 
 const Footer = () => {
     return (
-        <div className ="container-fluid w-auto text-center" >
+        <div className ="container-fluid w-auto text-center mt-5" >
             <div className="row p-5 bg-secondary aling-item-center">
                 <div className="col-sx-12 col-md-6 col-lg-3 text-white">
                     <div>
