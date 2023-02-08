@@ -19,7 +19,7 @@ const Categorias = () => {
             
         { !Categ ? <h3 className="text-Center">Cargando productos...</h3> :
             Categ.map((categ, index) => {
-                return <button className="dropdown-item" id={index}>{categ[0].toUpperCase()}{categ.substring(1)}
+                return <button key={index} className="dropdown-item" id={index}>{categ[0].toUpperCase()}{categ.substring(1)}
                 </button>
             })
         }
