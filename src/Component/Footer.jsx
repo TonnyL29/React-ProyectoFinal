@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3 aling-center">
                 <div><p className='h4 text-center text-white'>Categorias</p></div>
-            { !Categ ? <h5 className="text-Center">Cargando productos...</h5> :
+            { !Categ ? <p className="text-Center">Cargando categorias...</p> :
             Categ.map((categ) => {
                     return <div key={categ} className='text-center h6 mt-3'><a onClick={cargarCat({categ})} className='text-dark text-decoration-none' href='/'>{categ}</a></div>
                 })
