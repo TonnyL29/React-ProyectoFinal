@@ -11,7 +11,9 @@ const Footer = () => {
     const cargarCat = (valor) =>{
         <Productos product= {"products/category/" + valor} />
     }
-    let Categ = useFetchHook('C')
+    let prop = 'C';
+    let valor = '0';
+    let Categ = useFetchHook({prop},{valor})
     return (
         <div className ="container-fluid w-auto text-center mt-5" >
             <div className="row ps-5 pe-5 bg-secondary aling-item-center p-3">
@@ -23,13 +25,11 @@ const Footer = () => {
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3 aling-center">
                 <div><p className='h4 text-center text-white'>Categorias</p></div>
-                { !Categ ? <h5 className="text-Center">Cargando productos...</h5> :
-                Categ.map((categ, index) => {
-                    return <div>
-                        <div key={categ.indexOf(categ)} className='text-center h6 mt-3'><a onClick={cargarCat({categ})} className='text-dark text-decoration-none' href='/'>{categ}</a></div>
-                        </div>
-            })
-        }
+            { !Categ ? <h5 className="text-Center">Cargando productos...</h5> :
+            Categ.map((categ) => {
+                    return <div key={categ} className='text-center h6 mt-3'><a onClick={cargarCat({categ})} className='text-dark text-decoration-none' href='/'>{categ}</a></div>
+                })
+            }
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3">
                 <div><p className='h4 text-center text-white'>Nosotros</p></div>

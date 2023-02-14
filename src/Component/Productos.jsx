@@ -1,8 +1,10 @@
 import './Resource/Productos.css';
 import useFetchHook from './Resource/useFetchHook';
 
-const Productos = () => {
-    let Prod = useFetchHook('P');
+const Productos = (props) => {
+    let prop = props.propiedad;
+    let valor = parseInt(props.value);
+    let Prod = useFetchHook({prop},{valor});
 return(
             <div className ="conteiner mt-4" id="">
                 <div className ="row gap-2" id="contenedor">

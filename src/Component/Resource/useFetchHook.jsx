@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 
-const useFetchHook = (a, b = 0) => {
+const useFetchHook = (props) => {
+    let a = props.prop;
+    let b = parseInt(props.valor); 
     const URL = (a, b) =>{
         if(a === 'P'){
             return ('https://fakestoreapi.com/products/');

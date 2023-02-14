@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <div>
   <NavBar />
-  <Productos />
+  <Productos propiedad = 'P' value = '0'/>
   <ContenedorModal />
   <Footer />
 </div>
