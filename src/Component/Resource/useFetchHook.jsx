@@ -1,29 +1,27 @@
 import { useState, useEffect } from 'react';
 
 const useFetchHook = (props) => {
-    let a = props.prop;
-    let b = parseInt(props.valor); 
-    const URL = (a, b) =>{
-        if(a === 'P'){
+    const URL = () =>{
+        if(props.prop === 'P'){
             return ('https://fakestoreapi.com/products/');
-        }else if(a === 'C'){
+        }else if(props.prop === 'C'){
             return ('https://fakestoreapi.com/products/categories');
-        }else if(a === 'SP'){
-            if(!b === 0){
-                return ('https://fakestoreapi.com/products/categories/'+b);
+        }else if(props.prop === 'SC'){
+            if(!props.valor === '0'){
+                return ('https://fakestoreapi.com/products/categories/'+props.valor);
             }else{
                 return 'Error, el valor especificado no es el correcto'
             }
-        }else if(a === 'SC'){
-            if(!b === 0){
-                return ('https://fakestoreapi.com/products/'+b);
+        }else if(props.prop === 'SP'){
+            if(!props.valor === '0'){
+                return ('https://fakestoreapi.com/products/'+props.valor);
             }else{
                 return 'Error, el valor especificado no es el correcto'
             }
         }
     }
 const [Prod, ProdData] = useState();
-    let respURL = URL(a, b);
+    let respURL = URL();
     useEffect(() =>{
         const fetchApi = async () =>{
             const respuesta = await fetch(respURL)

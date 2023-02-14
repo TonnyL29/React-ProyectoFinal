@@ -9,7 +9,7 @@ import useFetchHook from './Resource/useFetchHook';
 const Footer = () => {
 
     const cargarCat = (valor) =>{
-        <Productos product= {"products/category/" + valor} />
+        <Productos propiedad = 'SC' value = {valor} />
     }
     let prop = 'C';
     let valor = '0';
