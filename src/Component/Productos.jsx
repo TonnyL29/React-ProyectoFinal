@@ -2,13 +2,13 @@ import './Resource/Productos.css';
 import useFetchHook from './Resource/useFetchHook';
 
 const Productos = () => {
-    let Prod = useFetchHook();
+    let Prod = useFetchHook('P');
 return(
             <div className ="conteiner mt-4" id="">
                 <div className ="row gap-2" id="contenedor">
                 
             { !Prod ? <h3 className="text-Center">Cargando productos...</h3> :
-                Prod.map((Prod, index) => {
+                Prod.map((Prod) => {
                     return <div className="mx-auto card cardConteiner" key={Prod.id}>
     		        <img src={Prod.image} className="card-img-top mx-auto pt-4 imgCard" alt=""></img>
     		        <div className="card-body">
