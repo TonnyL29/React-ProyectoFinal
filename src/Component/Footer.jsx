@@ -45,10 +45,10 @@ const Footer = () => {
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3">
                     <div><p className='h4 text-center text-white'>Contactanos</p></div>
-                    <div className='text-center h6'><a href="/"><img className='me-2 mt-2' src={WhatsApp} alt="WhatsApp"  width={35}/> WhatsApp</a></div>
-                    <div className='text-center h6'><a href="/"><img className='me-2 mt-2' src={instagram} alt="Instagram" width={35}/>Instagram</a></div>
-                    <div className='text-center h6'><a href="/"><img className='me-2 mt-2' src={facebook} alt="WhatsApp" width={35}/>Facebook</a></div>
-                    <div className='text-center h6'><a href="/"><img className='me-2 mt-2' src={Youtube} alt="WhatsApp" width={35}/>YouTube</a></div>
+                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={WhatsApp} alt="WhatsApp"  width={35}/> WhatsApp</a></div>
+                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={instagram} alt="Instagram" width={35}/>Instagram</a></div>
+                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={facebook} alt="WhatsApp" width={35}/>Facebook</a></div>
+                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={Youtube} alt="WhatsApp" width={35}/>YouTube</a></div>
                 </div>
             </div>
         </div>
