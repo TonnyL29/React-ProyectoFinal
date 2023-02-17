@@ -5,6 +5,7 @@ import WhatsApp from './Resource/image/WhatsApp.png';
 import Youtube from './Resource/image/Youtube.png';
 import Productos from './Productos';
 import useFetchHook from './Resource/useFetchHook';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -31,7 +32,7 @@ const Footer = () => {
                         </div>
                     </div> :
             Categ.map((categ) => {
-                    return <div key={categ} className='text-center h6 mt-3'><a onClick={cargarCat({categ})} className='text-dark text-decoration-none' href='/'>{categ}</a></div>
+                    return <div key={categ} className='text-center h6 mt-3'><Link onClick={cargarCat({categ})} className='text-dark text-decoration-none' to={'/category/:'+categ}>{categ}</Link></div>
                 })
             }
                 </div>
@@ -45,10 +46,10 @@ const Footer = () => {
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3">
                     <div><p className='h4 text-center text-white'>Contactanos</p></div>
-                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={WhatsApp} alt="WhatsApp"  width={35}/> WhatsApp</a></div>
-                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={instagram} alt="Instagram" width={35}/>Instagram</a></div>
-                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={facebook} alt="WhatsApp" width={35}/>Facebook</a></div>
-                    <div className='text-center h6'><a href="/" className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={Youtube} alt="WhatsApp" width={35}/>YouTube</a></div>
+                    <div className='text-center h6'><Link to={'/'} className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={WhatsApp} alt="WhatsApp"  width={35}/> WhatsApp</Link></div>
+                    <div className='text-center h6'><Link to={'/'} className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={instagram} alt="Instagram" width={35}/>Instagram</Link></div>
+                    <div className='text-center h6'><Link to={'/'} className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={facebook} alt="WhatsApp" width={35}/>Facebook</Link></div>
+                    <div className='text-center h6'><Link to={'/'} className='text-decoration-none text-dark fs-6'><img className='me-2 mt-2' src={Youtube} alt="WhatsApp" width={35}/>YouTube</Link></div>
                 </div>
             </div>
         </div>
