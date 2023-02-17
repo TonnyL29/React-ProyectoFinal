@@ -13,7 +13,7 @@ const Footer = () => {
     }
     let prop = 'C';
     let valor = '0';
-    let Categ = useFetchHook({prop},{valor})
+    let Categ = useFetchHook(prop,valor)
     return (
         <div className ="container-fluid w-auto text-center mt-5" >
             <div className="row ps-5 pe-5 bg-secondary aling-item-center p-3">
@@ -25,7 +25,11 @@ const Footer = () => {
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3 aling-center">
                 <div><p className='h4 text-center text-white'>Categorias</p></div>
-            { !Categ ? <p className="text-Center">Cargando categorias...</p> :
+            { !Categ ? <div className ="d-flex justify-content-center">
+                        <div className ="spinner-border" role="status">
+                            <span className ="visually-hidden">Loading...</span>
+                        </div>
+                    </div> :
             Categ.map((categ) => {
                     return <div key={categ} className='text-center h6 mt-3'><a onClick={cargarCat({categ})} className='text-dark text-decoration-none' href='/'>{categ}</a></div>
                 })
