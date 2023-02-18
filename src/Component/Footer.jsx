@@ -32,14 +32,14 @@ const Footer = () => {
                         </div>
                     </div> :
             Categ.map((categ) => {
-                    return <div key={categ} className='text-center h6 mt-3'><Link onClick={cargarCat({categ})} className='text-dark text-decoration-none' to={'/category/:'+categ}>{categ}</Link></div>
+                    return <div key={categ} className='text-center h6 mt-3'><Link onClick={cargarCat({categ})} className='text-dark text-decoration-none' to={'/category/:'+categ}>{categ[0].toUpperCase()}{categ.substring(1)}</Link></div>
                 })
             }
                 </div>
                 <div className="col-sx-12 col-md-6 col-lg-3">
                 <div><p className='h4 text-center text-white'>Nosotros</p></div>
                     <div className='text-center h5'>Te esperamos en</div>
-                    <div className='text-center mb-3'><span className="material-symbols-outlined me-2">home_pin</span>Av. Calle publica n° 911 Local 4</div>
+                    <div className='text-center mb-3'><span className="material-symbols-outlined me-2">home_pin</span>Av. siempre viva n° 742, Springfield</div>
                     <div className='text-center h5'>Horario</div>
                     <div className='text-center'>Lunes a Viernes de</div>
                     <div className='text-center mb-3'>9:30 a 17:00 hrs</div>
