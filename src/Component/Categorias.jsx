@@ -2,9 +2,7 @@ import { NavLink } from "react-router-dom";
 import useFetchHook from "./Resource/useFetchHook";
 
 const Categorias = () =>{
-    let prop = 'C';
-    let valor = '0';
-    let Categ = useFetchHook(prop, valor);
+    let Categ = useFetchHook(['C', 0]);
     return(
         <div className='navbar-nav'>
         {!Categ ? <div className ="d-flex justify-content-center">
@@ -12,9 +10,8 @@ const Categorias = () =>{
                             <span className ="visually-hidden">Loading...</span>
                         </div>
                     </div> :
-                Categ.map((categ, index) => {
-                    console.log(categ)
-                return <li className="nav-item"><NavLink key={index} className="nav-link" to={'/category/:'+categ}>{categ[0].toUpperCase()}{categ.substring(1)}</NavLink></li>
+                Categ.map((categ) => {
+                return <li className="nav-item" key={categ}><NavLink  className="nav-link" to={'/category/:'+categ}>{categ[0].toUpperCase()}{categ.substring(1)}</NavLink></li>
             })
         }
         </div>

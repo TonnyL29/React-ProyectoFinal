@@ -1,8 +1,13 @@
+import { useParams } from 'react-router-dom';
 import './Resource/Productos.css';
 import useFetchHook from './Resource/useFetchHook';
 
 const Productos = () => {
-    let Prod = useFetchHook('P');
+    const {categoryId} = useParams();
+    let value = categoryId;
+    let param;
+    value ? param = 'SC' : param = 'P'; 
+    let Prod = useFetchHook([param, value]);
 return(
             <div className ="conteiner mt-4" id="">
                 <div className ="row gap-2" id="contenedor">

@@ -1,25 +1,22 @@
 import { useState, useEffect } from 'react';
 
-const useFetchHook = (useProp, useValue) => {
+const useFetchHook = ([useProp, useValue]) => {
     const URL = () =>{
-        if(useProp === 'P'){
-            return ('https://fakestoreapi.com/products/');
-        }else if(useProp === 'C'){
-            return ('https://fakestoreapi.com/products/categories');
-        }else if(useProp === 'SC'){
-            if(!useValue === '0'){
-                return ('https://fakestoreapi.com/products/categories/'+useValue);
-            }else{
-                return 'Error, el valor especificado no es el correcto'
-            }
-        }else if(useProp === 'SP'){
-            if(!useValue === '0'){
-                return ('https://fakestoreapi.com/products/'+useValue);
-            }else{
-                return 'Error, el valor especificado no es el correcto'
-            }
-        }else{
-            return ('https://fakestoreapi.com/products/');
+        switch (useProp) {
+            case 'P':
+                return ('https://fakestoreapi.com/products/')
+              //break;
+            case 'C':
+                return ('https://fakestoreapi.com/products/categories')
+                //break; 
+            case 'SP':
+                return (`https://fakestoreapi.com/products/${useValue}`)
+                //break;   
+            case 'SC':
+                return (`https://fakestoreapi.com/products/category/${useValue}`)
+                //break;
+            default:
+                return ('https://fakestoreapi.com/products/')
         }
     }
 const [Prod, ProdData] = useState();
@@ -32,7 +29,6 @@ const [Prod, ProdData] = useState();
         }
         fetchApi()
     }, [respURL])
-    console.log(Prod)
     return( 
         Prod
     )}
