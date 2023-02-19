@@ -5,16 +5,12 @@ const useFetchHook = ([useProp, useValue]) => {
         switch (useProp) {
             case 'P':
                 return ('https://fakestoreapi.com/products/')
-              //break;
             case 'C':
-                return ('https://fakestoreapi.com/products/categories')
-                //break; 
+                return ('https://fakestoreapi.com/products/categories') 
             case 'SP':
-                return (`https://fakestoreapi.com/products/${useValue}`)
-                //break;   
+                return (`https://fakestoreapi.com/products/${useValue}`)   
             case 'SC':
                 return (`https://fakestoreapi.com/products/category/${useValue}`)
-                //break;
             default:
                 return ('https://fakestoreapi.com/products/')
         }

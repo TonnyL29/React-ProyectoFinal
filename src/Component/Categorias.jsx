@@ -11,7 +11,7 @@ const Categorias = () =>{
                         </div>
                     </div> :
                 Categ.map((categ) => {
-                return <li className="nav-item" key={categ}><NavLink  className="nav-link" to={'/category/:'+categ}>{categ[0].toUpperCase()}{categ.substring(1)}</NavLink></li>
+                return <li className="nav-item" key={categ}><NavLink  className="nav-link" to={'/category/'+categ}>{categ[0].toUpperCase()}{categ.substring(1)}</NavLink></li>
             })
         }
         </div>
