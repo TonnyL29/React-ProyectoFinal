@@ -1,0 +1,24 @@
+.itemDetail-conteinerImg{
+    height: 350px;
+    box-sizing: border-box;
+}
+
+.itemDetail-img{
+    object-fit: scale-down;
+    height: 100%;  
+}
+
+.itemDetail-input{
+    width: 50px;
+    height: 40px;
+    border: none;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+.itemDetail-btn{
+    width: 45px;
+    height: 45px;
+    border: none;
+}
