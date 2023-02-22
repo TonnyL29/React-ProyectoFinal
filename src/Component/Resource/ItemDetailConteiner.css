@@ -1,11 +1,13 @@
 .itemDetail-conteinerImg{
-    height: 350px;
+    width: 350px;
+    height: 450px;
     box-sizing: border-box;
 }
 
 .itemDetail-img{
     object-fit: scale-down;
-    height: 100%;  
+    max-width: 90%;
+    height: auto; 
 }
 
 .itemDetail-input{
