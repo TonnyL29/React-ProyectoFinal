@@ -10,7 +10,7 @@ const Productos = () => {
     let Prod = useFetchHook([prod, value]);
 return(
             <div className ='conteiner mt-4' id=''>
-                <div className ='row gap-2' id='contenedor'>
+                <div className ='row gx-0 gy-3' id='contenedor'>
                 
             { !Prod ? <div className ='d-flex justify-content-center'>
                             <div className ='spinner-border' role='status'>
