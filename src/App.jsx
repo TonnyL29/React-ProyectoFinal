@@ -15,10 +15,8 @@ function App() {
                 <Route path='/' element={<Productos />} />
                 <Route path='/category/:categoryId' element={<Productos />} />
                 <Route path='products/:productId' element={<ItemDetailConteiner />} />
-                <Route path='/category/jewelery/products/:productId' element={<ItemDetailConteiner />} />
-                <Route path='/category/electronics/products/:productId' element={<ItemDetailConteiner />} />
+                <Route path='/category/:category/products/:productId' element={<ItemDetailConteiner />} />
                 <Route path='*/products/:productId' element={<ItemDetailConteiner />} />
-
                 <Route path='*' element={<Error404 />} />
             </Routes>
             <Footer />

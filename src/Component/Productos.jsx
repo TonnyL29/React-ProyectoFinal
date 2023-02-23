@@ -20,17 +20,16 @@ return(
                         </div> :
                 Prod.map((Prod) => {
                     return <div className='mx-auto card cardConteiner' key={Prod.id}>
-                        <div className='ConteinerImg'><img src={Prod.image} className='card-img-top mx-auto pt-4 imgCard' alt=''></img></div>
-    		        <div className='card-body'>
-                        <div className='ConteinerTitle align-self-center'>
-                            <h5 className='card-title fs-5 text-center align-self-center'>{Prod.title}</h5>
+                        <div className='ConteinerImg p-2'><img src={Prod.image} className='card-img-top mx-auto pt-4 imgCard' alt=''></img></div>
+    		        <div className='card-body' style={{ textAlign: 'center' }}>
+                        <div className='ConteinerTitle'>
+                            <h5 className='card-title fs-5 text-center'>{Prod.title}</h5>
                         </div>
-                        <p className='card-text'><br></br></p>
+                        <p className='card-subtitle mb-2 text-muted' style={{ textAlign: 'start' }}>{Prod.category}</p>
+                        <p className='card-text'></p>
                         <h4 className='card-subtitle mb-2 text-primary text-center'>Precio: ${Prod.price}</h4>
-                        <p className='card-subtitle mb-2 text-muted'>{Prod.category}</p>
+                        <hr />
                         <button className='btn btn-primary'><Link className='text-decoration-none text-white fs-6' to={'products/'+Prod.id}>Ver producto</Link></button>
-                        <button className='btn btn-primary ms-2'><span className='material-symbols-outlined'>
-                        add_shopping_cart</span></button>
     		        </div>
     	        </div>
                 })
