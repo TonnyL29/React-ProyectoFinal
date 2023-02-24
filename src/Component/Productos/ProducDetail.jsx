@@ -13,7 +13,7 @@ const ProducDetail = ({Prod}) =>{
                             </div> :
                     Prod.map((Prod) => {
                         return (
-                            <Item Item= { Prod }/>
+                            <Item key = {Prod.id} Item= { Prod }/>
                         )
                     })
             }

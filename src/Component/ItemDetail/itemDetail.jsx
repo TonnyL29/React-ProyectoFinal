@@ -1,6 +1,14 @@
 import ItemCounter from './ItemCounter';
 
 const ItemDetail = ({item}) =>{
+
+    let Stock;
+    const stock = () => {
+        Stock = Math.floor(Math.random() * 10);
+        return Stock
+    }
+    stock();
+
     const { id, title, description, price, image } = item;
     return(
         <div className='row bg-white p-4 text-center align-items-center justify-content-center'>
@@ -12,7 +20,7 @@ const ItemDetail = ({item}) =>{
             <hr />
             <p className='fs-6'>{description}</p>
             <hr />
-                <ItemCounter price={price} />
+                <ItemCounter price={price} stock = {Stock} />
         </div>
     </div>
     )
