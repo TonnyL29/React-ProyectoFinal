@@ -27,7 +27,7 @@ const ItemCounter = ({ price, stock }) => {
 
     return (
         <>
-            <p className="text-end text-muted"> Stock disponible: {stock}</p>
+            <p className="text-end text-muted"> Stock disponible: {ItemStock}</p>
             <button className='btn btn-primary itemDetail-btn' onClick={handleRemove}><span className="material-symbols-outlined align-middle text-center">remove</span></button>
             <input className='itemDetail-input text-center' value={Cant} type="text" onChange={(e) => setCant(parseInt(e.target.value) || 0)} />
             <button className='btn btn-primary itemDetail-btn' onClick={handleAdd}><span className="material-symbols-outlined align-middle text-center">add</span></button>
