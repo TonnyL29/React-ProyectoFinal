@@ -5,7 +5,12 @@ const ItemDetail = ({item}) =>{
     let Stock;
     const stock = () => {
         Stock = Math.floor(Math.random() * 10);
-        return Stock
+        if(Stock === 0){
+            Stock = Math.floor(Math.random() * 10);
+        } else {
+            return Stock 
+        }
+
     }
     stock();
 
