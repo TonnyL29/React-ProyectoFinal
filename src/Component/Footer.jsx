@@ -3,7 +3,7 @@ import facebook from './Resource/image/Facebook.png';
 import instagram from './Resource/image/Instagram.png';
 import WhatsApp from './Resource/image/WhatsApp.png';
 import Youtube from './Resource/image/Youtube.png';
-import Productos from './Productos';
+import Productos from './Productos/ProducConteiner';
 import useFetchHook from './Resource/useFetchHook';
 import { Link } from 'react-router-dom';
 

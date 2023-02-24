@@ -1,8 +1,8 @@
 import './index.css';
 import NavBar from './Component/NavBar';
-import Productos from './Component/Productos';
+import Productos from './Component/Productos/ProducConteiner';
 import Footer from './Component/Footer';
-import ItemDetailConteiner from './Component/ItemDetailConteiner';
+import ItemDetailConteiner from './Component/ItemDetail/ItemDetailConteiner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error404 from './Component/Error404';
 
