@@ -15,3 +15,12 @@ code {
 body{
   background: #c6c9c7;
 }
+
+
+.line-height {
+  height: 10px;
+  width: 100%;
+  clear: both;
+  display: block;
+  content: "";
+}
