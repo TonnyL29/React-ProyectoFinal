@@ -6,7 +6,7 @@ import ItemDetailConteiner from './Component/ItemDetail/ItemDetailConteiner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error404 from './Component/Error404';
 import CartContextProvider from './Component/Context/CartContext';
-import Cart from './Component/Cart';
+import CartConteiner from './Component/Cart/CartConteiner';
 
 function App() {
     return(
@@ -20,7 +20,7 @@ function App() {
                         <Route path='products/:productId' element={<ItemDetailConteiner />} />
                         <Route path='/category/:category/products/:productId' element={<ItemDetailConteiner />} />
                         <Route path='*/products/:productId' element={<ItemDetailConteiner />} />
-                        <Route path='/cart' element={<Cart />} />
+                        <Route path='/cart' element={<CartConteiner />} />
                         <Route path='*' element={<Error404 />} />
                     </Routes>
                     <Footer />

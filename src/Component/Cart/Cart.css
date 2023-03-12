@@ -1,0 +1,9 @@
+.imgCardCart {
+    object-fit: scale-down;
+    height: 100%;    
+}
+
+.ConteinerImgCart{
+    height: 150px;
+    box-sizing: border-box;
+}
