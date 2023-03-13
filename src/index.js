@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-
+import { getFirestore } from 'firebase/firestore';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCjWU3XM0cJB3vYaxbEGDkxiMkX7foT1io",
-  authDomain: "demoda-bb639.firebaseapp.com",
-  projectId: "demoda-bb639",
-  storageBucket: "demoda-bb639.appspot.com",
-  messagingSenderId: "956283637349",
-  appId: "1:956283637349:web:2225951f1a077e7321808c"
+  apiKey: `${process.env.REACT_APP_APIKEY}`,
+	authDomain: `${process.env.REACT_APP_AUTHDOMAIN}`,
+	projectId: `${process.env.REACT_APP_PROJECTID}`,
+	storageBucket: `${process.env.REACT_APP_STORAGEBUCKET}`,
+	messagingSenderId: `${process.env.REACT_APP_MESSAGINGSENDERID}`,
+	appId: `${process.env.REACT_APP_APPID}`,
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
