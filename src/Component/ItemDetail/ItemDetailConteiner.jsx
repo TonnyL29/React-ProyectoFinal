@@ -1,16 +1,21 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './itemDetail';
 import './ItemDetailConteiner.css'
-import useFetchHook from '../Resource/useFetchHook';
-
+import { useEffect, useState } from 'react';
+import { getFirestore, getDoc, doc } from 'firebase/firestore';
 
 
 const ItemDetailConteiner = () => {
     const { productId } = useParams();
-
-    let product = useFetchHook(['SP', productId]);
-    if (!product) {
+    console.log(productId);
+    const [item, setItem] = useState([]);
+useEffect(() =>{
+    const db = getFirestore(); 
+    const document = doc(db, "item", productId);
+     getDoc(document).then(element => {
+        setItem({id:element.id, ...element.data()})})
+}, [productId]);
+    if (!item) {
         return <div className='d-flex justify-content-center'>
             <div className='spinner-border' role='status'>
                 <span className='visually-hidden'>Loading...</span>
@@ -21,7 +26,7 @@ const ItemDetailConteiner = () => {
 
     return (
         <div className='conteiner mt-4'>
-            <ItemDetail item = {product} />
+            <ItemDetail item = {item} />
         </div>
 
     );

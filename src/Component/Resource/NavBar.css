@@ -1,3 +1,9 @@
 .NavBarContent {
     background-color: #C5E1D4;
 }
+
+.navlink:hover{
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d1b1b88;
+}

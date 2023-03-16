@@ -8,7 +8,7 @@ const ItemCounter = ({ price, stock, onAdd }) => {
     const [Cant, setCant] = useState(1);
     const [ItemAdded, setItemAdded] = useState(false);
     const handleAdd = () => {
-        if (Cant < ItemStock) {
+        if (Cant < stock) {
             setCant(Cant + 1)
         }
     }
@@ -20,7 +20,7 @@ const ItemCounter = ({ price, stock, onAdd }) => {
     let total = price * Cant;
 
     const addToCart = () => {
-        if (ItemStock >= Cant) {
+        if (stock >= Cant) {
             setItemStock(ItemStock - Cant)
             setCant(1)       
             setItemAdded(true)
@@ -31,7 +31,7 @@ const ItemCounter = ({ price, stock, onAdd }) => {
 
     return (
         <>
-            <p className="text-end text-muted"> Stock disponible: {ItemStock}</p>
+            <p className="text-end text-muted"> Stock disponible: {stock}</p>
             <button className='btn btn-primary itemDetail-btn' onClick={handleRemove}><span className="material-symbols-outlined align-middle text-center">remove</span></button>
             <input className='itemDetail-input text-center' value={Cant} type="text" onChange={(e) => setCant(parseInt(e.target.value) || 0)} />
             <button className='btn btn-primary itemDetail-btn' onClick={handleAdd}><span className="material-symbols-outlined align-middle text-center">add</span></button>

@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = () => {
-  const { Cart, removeItem, addItem, restItem } = useContext(CartContext);
+  const { Cart, removeItem, addItem, restItem, addOneItem } = useContext(CartContext);
   return Cart.map((item) => {
     let total = item.price * item.cantidad;
+    console.log(item)
     return (
       <>
         <div class="row" key={item.id}>
@@ -44,8 +45,20 @@ const Cart = () => {
                   style={{ height: "100%" }}
                 ></div>
               </div>
-              <div className="col-1 d-flex align-items-center justify-content-center px-auto">
-                <Link
+              <div className="col-1 px-auto">
+              <div className="row">
+                    <div className="col-12 d-flex align-items-center justify-content-center px-auto">
+                      Stock: {item.stock}
+                    </div>
+                  </div>
+                  <div className="row mb-4">
+                    <div className="col-12 d-flex align-items-center justify-content-center px-auto">
+                     
+                    </div>
+                  </div>
+                <div className="row">
+                  <div className="col-12 d-flex align-items-center justify-content-center px-auto">
+                  <Link
                   onClick={() => {
                     restItem(item, 1);
                   }}
@@ -71,7 +84,7 @@ const Cart = () => {
                 />
                 <Link
                   onClick={() => {
-                    addItem(item, 1);
+                    addOneItem(item, 1, item.cantidad);
                   }}
                   className="btn btn-primary itemDetail-btn"
                 >
@@ -79,6 +92,9 @@ const Cart = () => {
                     add
                   </span>
                 </Link>
+                  </div>
+                </div>
+                
               </div>
               <div className="col-1 d-flex justify-content-center">
                 <div
