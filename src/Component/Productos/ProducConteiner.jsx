@@ -7,7 +7,6 @@ import { collection, getFirestore, getDocs, query, where } from 'firebase/firest
 const Productos = () => {
     const [items, setItems] = useState([]);
     const { categoryId } = useParams();
-    console.log(categoryId);
     const categorias = ['hombres', 'mujeres', 'joyeria', 'electronica'];
     const categorys = ["men's clothing","women's clothing", "jewelery","electronics"]
     const idFilter = categorias.indexOf(categoryId);

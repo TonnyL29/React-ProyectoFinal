@@ -3,7 +3,6 @@ import { CartContext } from '../Context/CartContext';
 import ItemCounter from './ItemCounter';
 
 const ItemDetail = ({item}) =>{
-    console.log(item)
     const {addItem} = useContext(CartContext);
 
     const onAdd = (cantidad) =>{

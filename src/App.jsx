@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error404 from './Component/Error404';
 import CartContextProvider from './Component/Context/CartContext';
 import CartConteiner from './Component/Cart/CartConteiner';
+import Nosotros from './Component/Nosotros';
 
 function App() {
     return(
@@ -21,6 +22,7 @@ function App() {
                         <Route path='/category/:category/products/:productId' element={<ItemDetailConteiner />} />
                         <Route path='*/products/:productId' element={<ItemDetailConteiner />} />
                         <Route path='/cart' element={<CartConteiner />} />
+                        <Route path='/nosotros' element={<Nosotros />} />
                         <Route path='*' element={<Error404 />} />
                     </Routes>
                     <Footer />

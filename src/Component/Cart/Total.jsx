@@ -7,8 +7,8 @@ const Total = () =>{
     let total = cartSum()
     return (
         <>
-                <div class="row">
-          <div class="col-12">
+                <div className="row">
+          <div className="col-12">
             <div className="row">
               <div className="col-1 d-flex justify-content-center">
                 <div

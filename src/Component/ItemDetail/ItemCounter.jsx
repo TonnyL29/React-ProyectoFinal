@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const ItemCounter = ({ price, stock, onAdd }) => {
 
-    console.log(stock)
     const [ItemStock, setItemStock] = useState(stock)
     const [Cant, setCant] = useState(1);
     const [ItemAdded, setItemAdded] = useState(false);

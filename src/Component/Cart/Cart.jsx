@@ -5,13 +5,13 @@ import "./Cart.css";
 
 const Cart = () => {
   const { Cart, removeItem, addItem, restItem, addOneItem } = useContext(CartContext);
-  return Cart.map((item) => {
-    let total = item.price * item.cantidad;
-    console.log(item)
-    return (
-      <>
-        <div class="row" key={item.id}>
-          <div class="col-12">
+  return (
+    <div>
+      {Cart.map((item) => {
+        let total = item.price * item.cantidad;
+        return (
+        <div className="row" key={item.id}>
+          <div className="col-12">
             <div className="row">
               <div className="col-1 d-flex justify-content-center">
                 <div
@@ -124,12 +124,13 @@ const Cart = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div>        
+          <hr />
         </div>
-        <hr />
-      </>
-    );
-  });
-};
+        );
+    })}
+  </div>
+);
+}
 
 export default Cart;
